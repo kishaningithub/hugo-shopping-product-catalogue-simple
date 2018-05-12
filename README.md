@@ -17,7 +17,7 @@ For more information read the official [setup guide](https://gohugo.io/overview/
 
 ## Configuration
 
-After installing the Creative portfolio theme successfully, i recommend you to take a look at the [exampleSite](https://github.com/kishaningithub/hugo-shopping-product-catalogue-simple/tree/master/exampleSite) directory. You will find a working Hugo site configured with the Creative portfolio theme that you can use as a starting point for your site.
+After installing the theme successfully, i recommend you to take a look at the [exampleSite](https://github.com/kishaningithub/hugo-shopping-product-catalogue-simple/tree/master/exampleSite) directory. You will find a working Hugo site configured with the theme that you can use as a starting point for your site.
 
 First, let's take a look at the [config.toml](https://github.com/kishaningithub/hugo-shopping-product-catalogue-simple/tree/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
 
