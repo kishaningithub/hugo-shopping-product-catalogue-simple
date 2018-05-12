@@ -1,4 +1,8 @@
 sudo: false
+addons:
+    apt:
+      packages: 
+      - tree
 install:
   - mkdir tools && cd tools
   - pwd
