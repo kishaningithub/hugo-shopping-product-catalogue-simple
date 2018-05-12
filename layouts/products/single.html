@@ -5,26 +5,23 @@
 <article class="container-fluid">
     <div class="row">
         <div class="col-12">
-            {{ partial "site-main-nav.html" . }} 
+            {{ partial "products/common/site-main-nav.html" . }} 
         </div>
     </div>
     <div class="row d-block d-md-none">
         <div class="col-sm-12">
-            <h1>{{ .Title }}</h1>
-            <p>{{ .Params.actualPrice }} {{ if not .Params.inStock }} <span class="font-weight-bold">— Sold Out</span> {{ end }}</p>
+            {{ partial "products/single/product-single-heading.html" . }} 
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-6">
             {{ range .Params.images }}
-            <img class="img-fluid text-center" src="{{ . }}" /> {{ end }}
+            <img class="img-fluid text-center" src="{{ . }}" /> 
+            {{ end }}
         </div>
-        <div class="col-sm-12 col-md-6">
-            <h1 class="d-sm-none d-md-block">{{ .Title }}</h1>
-            <p class="d-sm-none d-md-block">{{ .Params.actualPrice }} {{ if not .Params.inStock }}
-                <span class="font-weight-bold">— Sold Out</span> {{ end }}</p>
-            <p>{{ .Content }}</p>
+        <div class="col-sm-12 col-md-6 d-sm-none d-md-block">
+            {{ partial "products/single/product-single-heading.html" . }} 
         </div>
     </div>
 </article>
-{{end }}
+{{ end }}

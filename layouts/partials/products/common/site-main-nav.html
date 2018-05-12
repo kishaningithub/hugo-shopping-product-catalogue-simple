@@ -5,7 +5,7 @@
         </li>
         {{ range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
         <li class="nav-item">
-            <a class="nav-link" href="{{ .Permalink }}">{{ .Title}}</a>
+            <a class="nav-link" href="{{ .Permalink }}">{{ .Title | title }}</a>
         </li>
         {{ end }}
     </ul>

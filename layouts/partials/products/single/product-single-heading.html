@@ -1,0 +1,6 @@
+<h1>{{ .Title }}</h1>
+<p>
+    <span style="text-decoration: line-through">{{ .Params.comparePrice }}</span>
+    <span>{{ .Params.actualPrice }}</span>
+    {{ if not .Params.inStock }} <span class="font-weight-bold">— Sold Out</span> {{ end }}
+</p>

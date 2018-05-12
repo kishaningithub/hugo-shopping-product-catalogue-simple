@@ -4,12 +4,12 @@
 <article class="container-fluid">
     <div class="row">
         <div class="col-12">
-            {{ partial "site-main-nav.html" . }} 
+            {{ partial "products/common/site-main-nav.html" . }} 
         </div>
     </div>
     <div class="row">
         {{ range .Data.Pages }} 
-            {{ partial "product-list-item.html" . }} 
+            {{ partial "products/list/product-list-item.html" . }} 
         {{ end }}
     </div>
 </article>
