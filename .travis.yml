@@ -6,4 +6,5 @@ install:
   - tar -xvzf hugo.tar.gz
 script:
   - git clone --depth 1 https://github.com/kishaningithub/hugo-shopping-product-catalogue-simple.git exampleSite/themes/
+  - ls tools
   - ./tools/hugo -v --source exampleSite
