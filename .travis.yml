@@ -1,7 +1,8 @@
 sudo: false
 install:
-  - wget -q "https://github.com/gohugoio/hugo/releases/download/v0.40.2/hugo_0.40.2_Linux-64bit.tar.gz" -O "hugo.tar.gz"
-  - tar -xzf hugo.tar.gz -C /usr/local/bin
+  - mkdir tools
+  - wget -q "https://github.com/gohugoio/hugo/releases/download/v0.40.2/hugo_0.40.2_Linux-64bit.tar.gz" -O "tools/hugo.tar.gz"
+  - tar -xzf tools/hugo.tar.gz
 script:
   - cd exampleSite
   - cp -r .. themes/
