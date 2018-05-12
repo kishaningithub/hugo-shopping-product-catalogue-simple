@@ -1,0 +1,11 @@
+<a class="col-6 col-lg-3" href="{{ .RelPermalink }}" style="color: inherit;">
+    <img class="img-fluid text-center" src="{{ .Params.thumbnailImage }}" />
+    <p class="text-left">
+        <span style="font-size: 13px">{{ .Params.title }}</span>
+        <br/>
+        <span style="font-size: 16px">
+            {{ .Params.actualPrice }} {{ if not .Params.inStock }}
+            <span class="font-weight-bold">— Sold Out</span> {{ end }}
+        </span>
+    </p>
+</a>

@@ -1,0 +1,15 @@
+<header>
+    <h1 class="text-center">{{ .Site.Title }}</h1>
+</header>
+<article class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            {{ partial "site-main-nav.html" . }} 
+        </div>
+    </div>
+    <div class="row">
+        {{ range .Data.Pages }} 
+            {{ partial "product-list-item.html" . }} 
+        {{ end }}
+    </div>
+</article>

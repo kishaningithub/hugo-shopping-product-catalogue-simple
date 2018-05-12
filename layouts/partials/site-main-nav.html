@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand navbar-light justify-content-center">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/products">All</a>
+        </li>
+        {{ range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ .Permalink }}">{{ .Title}}</a>
+        </li>
+        {{ end }}
+    </ul>
+</nav>

@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Fancy Lighting Catalogue"
+theme = "hugo-shopping-product-catalogue-simple"
