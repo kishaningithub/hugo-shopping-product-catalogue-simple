@@ -3,8 +3,8 @@ title: "Modo 21 Lamp"
 date: 2018-05-12T15:54:25+05:30
 tags: ["chandeliers"]
 categories: ["chandeliers"]
-images: ["https://cdn.shopify.com/s/files/1/1204/7448/products/MD8001-21_1024x1024.jpg?v=1522740623", "https://cdn.shopify.com/s/files/1/1204/7448/products/MD8001-21.2_1024x1024.jpg?v=1522740623", "https://cdn.shopify.com/s/files/1/1204/7448/products/MD8001-21_1024x1024.jpeg?v=1522740623"]
-thumbnailImage: "https://cdn.shopify.com/s/files/1/1204/7448/products/MD8001-21_large.jpeg?v=1522740623"
+images: ["/img/modo-21-lamp/1.jpg", "/img/modo-21-lamp/2.jpg", "/img/modo-21-lamp/2.jpg"]
+thumbnailImage: "/img/modo-21-lamp/thumbnail.jpg"
 comparePrice: ""
 actualPrice: "₹ 85,000.00"
 inStock: true

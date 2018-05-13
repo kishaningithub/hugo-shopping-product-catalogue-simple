@@ -3,8 +3,8 @@ title: "Retro Vintage Industrial Cage Pendant System"
 date: 2018-05-10T20:11:38+05:30
 tags: ["Pendant Light"]
 categories: ["Pendant Light"]
-images: ["https://cdn.shopify.com/s/files/1/0832/3531/products/retro-vintage-cage-pendant-system_1024x1024.png?v=1474392866", "https://cdn.shopify.com/s/files/1/0832/3531/products/Screen_Shot_2015-11-28_at_8.46.45_pm_1024x1024.png?v=1474392865"]
-thumbnailImage: "https://cdn.shopify.com/s/files/1/0832/3531/products/retro-vintage-cage-pendant-system_large.png?v=1474392866"
+images: ["/img/retro-vintage-industrial-cage-pendant-system/1.png", "/img/retro-vintage-industrial-cage-pendant-system/2.png"]
+thumbnailImage: "/img/retro-vintage-industrial-cage-pendant-system/thumbnail.png"
 comparePrice: ""
 actualPrice: "₹ 3,744.00"
 inStock: true

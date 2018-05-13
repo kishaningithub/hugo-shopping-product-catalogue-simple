@@ -3,14 +3,14 @@ title: "Azure Blue De Stijl Inspired Bedside Retro Light"
 date: 2018-05-10T08:02:34+05:30
 tags: ["Wall Light"]
 categories: ["Wall Light"]
-images : ["https://cdn.shopify.com/s/files/1/0976/8822/products/bedside_modern_style_lamp_light_sconce.jpg?v=1523161339"]
-thumbnailImage: "https://cdn.shopify.com/s/files/1/0976/8822/products/bedside_modern_style_lamp_light_sconce_large.jpg?v=1523161339"
+images : ["/img/azure-blue-de-stijl-bedside-retro-light-with-black-ring/1.jpg"]
+thumbnailImage: "/img/azure-blue-de-stijl-bedside-retro-light-with-black-ring/thumbnail.jpg"
 comparePrice: "₹ 3000.00"
 actualPrice: "₹ 2917.00"
 inStock: true
 ---
 
-The azure blue bedside modern retro lamp is functional at different levels and minimal in appearance. You can swivel it to your desired angle and pivot the light freely. 
+The azure blue bedside modern retro lamp is functional at different levels and minimal in appearance. You can swivel it to your desired angle and pivot the light freely.
 
 - Feature: 360 degrees swivel.
 - Bulb: Not Included, Shop here

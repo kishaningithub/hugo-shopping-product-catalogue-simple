@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="row">
-        {{ range .Data.Pages }} 
+        {{ range .Data.Pages.ByPublishDate }} 
             {{ partial "products/list/product-list-item.html" . }} 
         {{ end }}
     </div>

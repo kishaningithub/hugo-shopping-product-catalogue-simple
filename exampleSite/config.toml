@@ -1,4 +1,4 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Fancy Lighting Catalogue"
+title = "Awesome Lighting Inc."
 theme = "hugo-shopping-product-catalogue-simple"
