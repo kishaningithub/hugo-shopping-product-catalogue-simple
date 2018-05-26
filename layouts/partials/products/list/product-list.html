@@ -8,8 +8,11 @@
         </div>
     </div>
     <div class="row">
-        {{ range .Data.Pages.ByPublishDate }} 
+        {{ range .Data.Pages }} 
             {{ partial "products/list/product-list-item.html" . }} 
         {{ end }}
     </div>
+    <script>
+    var productVariants = null;
+    </script>
 </article>

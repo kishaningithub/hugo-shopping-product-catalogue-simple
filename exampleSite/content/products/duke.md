@@ -1,14 +1,16 @@
----
-title: "Duke"
-date: 2018-05-12T15:48:00+05:30
-tags: ["Floor Light"]
-categories: ["Floor Light"]
-images: ["/img/duke/1.jpg", "/img/duke/2.jpg", "/img/duke/3.jpg"]
-thumbnailImage: "/img/duke/thumbnail.jpg"
-comparePrice: ""
-actualPrice: "₹ 87,341.00"
-inStock: true
----
+{
+    "title": "Duke",
+    "date": "2018-05-12T15:48:00+05:30",
+    "tags": ["Floor Light"],
+    "categories": ["Floor Light"],
+    "images": ["/img/duke/1.jpg", "/img/duke/2.jpg", "/img/duke/3.jpg"],
+    "thumbnailImage": "/img/duke/thumbnail.jpg",
+    "actualPrice": "₹ 87,341.00",
+    "comparePrice": "",
+    "inStock": true,
+    "options": {},
+    "variants": []
+}
 
 Total Fixture Dimensions (in inches): 51x51x63
 

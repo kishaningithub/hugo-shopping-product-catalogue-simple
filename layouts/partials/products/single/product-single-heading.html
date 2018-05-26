@@ -1,6 +1,22 @@
 <h1>{{ .Title }}</h1>
 <p>
-    <span style="text-decoration: line-through">{{ .Params.comparePrice }}</span>
-    <span>{{ .Params.actualPrice }}</span>
-    {{ if not .Params.inStock }} <span class="font-weight-bold">— Sold Out</span> {{ end }}
+    <span class="product-compare-price"style="text-decoration: line-through">{{ .Params.comparePrice }}</span>
+    <span class="product-actual-price">{{ .Params.actualPrice }}</span>
+    <span class="product-not-in-stock" class="font-weight-bold">— Sold Out</span>
 </p>
+<p>
+    {{ range $index, $element := .Params.options }}
+    <span>{{ $index | humanize }}</span>
+    <select class="select-{{ $index }}">
+       {{ range $element  }}
+        <option>{{ . }}</option>
+      {{ end }}
+    </select>
+    {{ end }}
+</p>
+<script>
+    var productActualPrice  = {{ .Params.actualPrice }}
+    var productComparePrice  = {{ .Params.comparePrice }}
+    var productInStock = {{ .Params.inStock }}
+    var productVariants = JSON.parse({{ .Params.variants | jsonify }})
+</script>
