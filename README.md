@@ -8,6 +8,14 @@ Shopping product catalogue theme gives you a categorized display of all your pro
 
 ![screenshot-product-view.png](https://raw.githubusercontent.com/kishaningithub/hugo-shopping-product-catalogue-simple/master/images/screenshot-product-view.png)
 
+## Features
+
+- [x] Product catalogue
+- [x] Support for product variants
+  - [x]  Specify price variations
+  - [x]  Specify stock availability
+- [ ] Social sharing icons
+
 ## Installation
 
 Go to the directory where you have your Hugo site and run:
@@ -20,11 +28,6 @@ rm -rf hugo-shopping-product-catalogue-simple/.git
 ```
 
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
-
-## Features
-
-- [x] Product catalogue
-- [x] Support for product variants and variant based prices
 
 ## Configuration
 
