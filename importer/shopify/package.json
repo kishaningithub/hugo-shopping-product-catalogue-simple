@@ -10,7 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.15.1",
-    "request": "^2.87.0",
-    "rxjs": "^6.2.0"
+    "request": "^2.87.0"
   }
 }

@@ -8,12 +8,12 @@ const program = require('commander'),
 function extractDataFromSite(siteUrl, outputDir){
   Promise.resolve(1).then(function fetchPage(pageNo) {
     extractProductsFromPage(siteUrl, pageNo).then(products => {
-      writeProductsAsMarkdown(products, outputDir);
+      writeProductsAsMarkdown(products, outputDir).catch(err => console.log(err));
       if(products.length > 0) {
         fetchPage(pageNo + 1);
       }
-    });
-  });
+    }).catch(err => console.log(err));
+  }).catch(err => console.log(err));
 }
 
 function getFileContent(product){
@@ -31,21 +31,22 @@ function getFrontMatter(product) {
   if(product.options[0].name == "Title"){
     frontMatter.options = {}
   } else {
-    frontMatter.options = product.options.map(option => {
-        let frontMatterOption = {};
-        frontMatterOption[option.name] = option.values;
-        return frontMatterOption;
-    });
+    frontMatter.options = product.options.reduce((map, option) => {
+      map[option.name] = option.values;
+      return map;
+    }, {});
   }
+  frontMatter.actualPrice = null;
+  frontMatter.comparePrice = null;
+  frontMatter.inStock = null;
   if(product.variants[0].title === "Default Title") {
     frontMatter.variants = [];
     frontMatter.actualPrice = product.variants[0].price;
-    frontMatter.comparePrice = product.variants[0].compare_at_price;
+    if(product.variants[0].compare_at_price && product.variants[0].compare_at_price > 0) {
+      frontMatter.comparePrice = product.variants[0].compare_at_price;
+    }
     frontMatter.inStock = product.variants[0].available;
   } else {
-    frontMatter.actualPrice = null;
-    frontMatter.comparePrice = null;
-    frontMatter.inStock = null;
     frontMatter.variants = product.variants.map(variant => {
         let frontMatterVariant = {};
         frontMatterVariant.optionCombination = [variant.option1, variant.option2, variant.option3].filter(val => val != null);
@@ -65,15 +66,15 @@ function getContent(product){
 function writeProductsAsMarkdown(products, outputDir){
   return new Promise(function (resolve, reject){
       products.forEach(product => {
-        let outputFile = outputDir + "/" + product.handle + ".md";
+        let outputFileName = product.title.replace(/\W/g, '-').replace(/-+/g, "-").toLowerCase();
+        let outputFile = outputDir + "/" + outputFileName + ".md";
         fs.writeFile(outputFile, getFileContent(product), function(err) {
-          if(err) {
-              console.dir(err);
-          }
-      }); 
+            if(err) {
+              reject(err);
+            }
+        }); 
     });
   });
-  
 }
 
 function extractProductsFromPage(siteUrl, pageNo){
