@@ -1,4 +1,5 @@
 $(function() {
+    initializeLazyLoadOfImages();
     $("select").change(function() {
         selectPriceBasedOnVariant();
     })
@@ -6,6 +7,11 @@ $(function() {
         selectPriceBasedOnVariant();
     }
 })
+
+function initializeLazyLoadOfImages() {
+    var bLazy = new Blazy();
+}
+
 function getSelectedVariant(productVariants, selectedProductOptions) {
     var sortedSelectedProductOptions = _.sortBy(selectedProductOptions)
     return _(productVariants).filter(function(productVariant) {
@@ -13,6 +19,7 @@ function getSelectedVariant(productVariants, selectedProductOptions) {
         return _(sortedOptionCombination).isEqual(sortedSelectedProductOptions)
     }).first()
 }
+
 function selectPriceBasedOnVariant() {
     var selectedProductOptions = $.map($("select:visible"), function(n, i) {
         return $(n).val();

@@ -3,7 +3,8 @@ const program = require('commander'),
       pkg = require('./package.json'),
       readline = require('readline'),
       request = require("request"),
-      fs = require('fs');
+      fs = require('fs'),
+      _ = require('lodash');
 
 function extractDataFromSite(siteUrl, outputDir){
   Promise.resolve(1).then(function fetchPage(pageNo) {
@@ -25,7 +26,11 @@ function getFrontMatter(product) {
   frontMatter.title = product.title;
   frontMatter.date = new Date().toISOString()
   frontMatter.tags = product.tags;
-  frontMatter.categories = product.product_type;
+  if(program.categoryConversion && program.categoryConversion[product.product_type.toLowerCase()]) {
+    frontMatter.categories = [program.categoryConversion[product.product_type.toLowerCase()]];
+  } else {
+    frontMatter.categories = [product.product_type];
+  }
   frontMatter.images = product.images.map(image => image.src);
   frontMatter.thumbnailImage = product.images[0].src;
   if(product.options[0].name == "Title"){
@@ -68,11 +73,13 @@ function writeProductsAsMarkdown(products, outputDir){
       products.forEach(product => {
         let outputFileName = product.title.replace(/\W/g, '-').replace(/-+/g, "-").toLowerCase();
         let outputFile = outputDir + "/" + outputFileName + ".md";
-        fs.writeFile(outputFile, getFileContent(product), function(err) {
-            if(err) {
-              reject(err);
-            }
-        }); 
+        if(product.images && product.images.length > 0) {
+          fs.writeFile(outputFile, getFileContent(product), function(err) {
+              if(err) {
+                reject(err);
+              }
+          }); 
+        }
     });
   });
 }
@@ -107,10 +114,17 @@ function importProducts(outputDirectory) {
   });
 }
 
+function parseCategoryMap(val) {
+  return _.transform(JSON.parse(val), function(result, value, key) {
+    result[key.toLowerCase()] = value;
+  }, {});
+}
+
 program
   .version(pkg.version)
   .description('Import products from shopify site')
-  .arguments('[output-directory]')
+  .usage('[options] <output directory>')
+  .option("-c , --category-conversion [JSON]", "Custom map categories", parseCategoryMap)
   .action(importProducts)
   .parse(process.argv); 
 

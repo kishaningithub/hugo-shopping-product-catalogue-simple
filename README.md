@@ -14,8 +14,9 @@ Shopping product catalogue theme gives you a categorized display of all your pro
 - [x] Support for product variants
   - [x] Specify price variations
   - [x] Specify stock availability
-- [ ] Importers
-  - [ ] Import data from shopify
+- [x] Importers
+  - [x] Import data from shopify
+- [x] Lazy loading images
 - [ ] Social sharing icons
 
 ## Installation
