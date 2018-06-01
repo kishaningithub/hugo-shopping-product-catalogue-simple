@@ -32,7 +32,7 @@ function getFrontMatter(product) {
     frontMatter.categories = [product.product_type];
   }
   frontMatter.images = product.images.map(image => image.src);
-  frontMatter.thumbnailImage = product.images[0].src;
+  frontMatter.thumbnailImage = product.images[0].src.replace('.jpg', '_large.jpg').replace('.png', '_large.png');
   if(product.options[0].name == "Title"){
     frontMatter.options = {}
   } else {
