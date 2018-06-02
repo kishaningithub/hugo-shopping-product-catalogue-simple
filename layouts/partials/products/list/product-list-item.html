@@ -4,8 +4,30 @@
         <span style="font-size: 13px">{{ .Params.title }}</span>
         <br/>
         <span style="font-size: 16px">
-            {{ .Params.actualPrice }} {{ if not .Params.inStock }}
-            <span class="font-weight-bold">— Sold Out</span> {{ end }}
+            {{ if .Params.actualPrice }}
+                {{ $.Scratch.Set "minimumPrice" (.Params.actualPrice | string) }}
+            {{ else }}
+                {{ $.Scratch.Set "minimumPrice" "999999999999999"}}                 
+            {{ end }}
+            {{ if .Params.inStock }}
+                {{ $.Scratch.Set "inStock" (.Params.inStock | string) }}
+            {{ else }}
+                {{ $.Scratch.Set "inStock" "false" }}
+            {{ end }}
+            {{ range .Params.variants }}
+                {{ $variantActualPrice := (.actualPrice | replaceRE "[^0-9.]+" "" | float )  }}
+                {{ $actualPrice := ($.Scratch.Get "minimumPrice" | replaceRE "[^0-9.]+" "" | float) }}
+                {{ if lt $variantActualPrice $actualPrice }}
+                    {{ $.Scratch.Set "minimumPrice" (.actualPrice | string)}} 
+                    {{ $.Scratch.Set "isMinimumVariantPrice" "true"}}
+                {{ end }}
+                {{ if .inStock }}
+                    {{ $.Scratch.Set "inStock" "true" }}
+                {{ end }}
+            {{ end }}
+            {{ if eq ($.Scratch.Get "isMinimumVariantPrice") "true" }} From {{ end }}
+            {{ $.Scratch.Get "minimumPrice" }} 
+            {{ if not (eq ($.Scratch.Get "inStock") "true")}} <span class="font-weight-bold">— Sold Out</span> {{ end }}
         </span>
     </p>
 </a>

@@ -5,9 +5,9 @@
     "categories": ["Wall Light"],
     "images": ["/img/alessa/1.png", "/img/alessa/2.jpg", "/img/alessa/3.jpg", "/img/alessa/4.jpg", "/img/alessa/5.jpg", "/img/alessa/6.jpg"],
     "thumbnailImage": "/img/alessa/thumnail.png",
-    "actualPrice": "",
-    "comparePrice": "",
-    "inStock": true,
+    "actualPrice": null,
+    "comparePrice": null,
+    "inStock": null,
     "options": {
             "Color": ["Chrome", "Green", "White", "Black"],
             "Size" : ["L19 x W24 x H23cms"]
@@ -15,19 +15,19 @@
     "variants": [
         {
             "optionCombination" : ["Chrome", "L19 x W24 x H23cms"],
-            "comparePrice": "",
+            "comparePrice": null,
             "actualPrice": "₹ 3,032.00",
             "inStock": true
         },
         {
             "optionCombination" : ["Green", "L19 x W24 x H23cms"],
-            "comparePrice": "",
+            "comparePrice": null,
             "actualPrice": "₹ 2,032.00",
             "inStock": false
         },
         {
             "optionCombination" : ["Black", "L19 x W24 x H23cms"],
-            "comparePrice": "",
+            "comparePrice": null,
             "actualPrice": "₹ 1,032.00",
             "inStock": true
         }

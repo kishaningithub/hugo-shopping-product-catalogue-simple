@@ -5,22 +5,22 @@
     "categories": ["Wall Light"],
     "images" : ["/img/azure-blue-de-stijl-bedside-retro-light-with-black-ring/1.jpg"],
     "thumbnailImage": "/img/azure-blue-de-stijl-bedside-retro-light-with-black-ring/thumbnail.jpg",
-    "actualPrice": "",
-    "comparePrice": "",
-    "inStock": true,
+    "actualPrice": null,
+    "comparePrice": null,
+    "inStock": null,
     "options": {
         "Type": ["With extension wire", "Without extension wire"]
     },
     "variants":  [
         {
             "optionCombination" : ["With extension wire"],
-            "comparePrice": "",
+            "comparePrice": null,
             "actualPrice": "₹ 2917.00",
             "inStock": true
         },
         {
             "optionCombination" : ["Without extension wire"],
-            "comparePrice": "",
+            "comparePrice": null,
             "actualPrice": "₹ 2000.00",
             "inStock": false
         }

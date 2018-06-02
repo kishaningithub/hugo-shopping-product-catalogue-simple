@@ -2,7 +2,7 @@
 <p>
     <span class="product-compare-price"style="text-decoration: line-through">{{ .Params.comparePrice }}</span>
     <span class="product-actual-price">{{ .Params.actualPrice }}</span>
-    <span class="product-not-in-stock" class="font-weight-bold">— Sold Out</span>
+    <span class="product-not-in-stock" class="font-weight-bold" {{ if .Params.inStock }} style="display:none" {{end}}>— Sold Out</span>
 </p>
 <p>
     {{ range $index, $element := .Params.options }}
