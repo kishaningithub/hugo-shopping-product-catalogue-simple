@@ -1,5 +1,6 @@
 <header>
     <h1 class="text-center">{{ .Site.Title }}</h1>
+    {{ with .Site.Params.description }}<h4 class="text-center">{{ . }}</h4>{{ end }}
 </header>
 <article class="container-fluid">
     <div class="row">
