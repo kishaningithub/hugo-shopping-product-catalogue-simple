@@ -4,7 +4,7 @@
     "tags": ["Floor Light"],
     "categories": ["Floor Light"],
     "images": ["img/oda-lamp/1.jpg", "img/oda-lamp/2.jpg"],
-    "thumbnailImage": "img/oda-lamp/thumbnail.jpg",
+    "thumbnailImage": "/img/oda-lamp/thumbnail.jpg",
     "actualPrice": "₹ 12,960.00",
     "comparePrice": "₹ 25,920.00",
     "inStock": false,

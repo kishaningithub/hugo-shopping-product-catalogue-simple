@@ -4,7 +4,7 @@
     "tags": ["Floor Light"],
     "categories": ["Floor Light"],
     "images": ["img/duke/1.jpg", "img/duke/2.jpg", "img/duke/3.jpg"],
-    "thumbnailImage": "img/duke/thumbnail.jpg",
+    "thumbnailImage": "/img/duke/thumbnail.jpg",
     "actualPrice": "₹ 87,341.00",
     "comparePrice": null,
     "inStock": true,

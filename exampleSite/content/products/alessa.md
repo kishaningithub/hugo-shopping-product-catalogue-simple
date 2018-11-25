@@ -4,7 +4,7 @@
     "tags": ["Wall Light", "ambience", "black", "black metal", "contemporary", "cool", "cozy", "edison bulb", "filament bulb", "glass", "green", "indoor", "light", "metal", "MODERN", "round", "rustic", "vintage", "white"],
     "categories": ["Wall Light"],
     "images": ["img/alessa/1.png", "img/alessa/2.jpg", "img/alessa/3.jpg", "img/alessa/4.jpg", "img/alessa/5.jpg", "img/alessa/6.jpg"],
-    "thumbnailImage": "img/alessa/thumnail.png",
+    "thumbnailImage": "/img/alessa/thumnail.png",
     "actualPrice": null,
     "comparePrice": null,
     "inStock": null,

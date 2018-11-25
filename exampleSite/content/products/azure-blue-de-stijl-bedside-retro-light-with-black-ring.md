@@ -4,7 +4,7 @@
     "tags": ["Wall Light"],
     "categories": ["Wall Light"],
     "images" : ["img/azure-blue-de-stijl-bedside-retro-light-with-black-ring/1.jpg"],
-    "thumbnailImage": "img/azure-blue-de-stijl-bedside-retro-light-with-black-ring/thumbnail.jpg",
+    "thumbnailImage": "/img/azure-blue-de-stijl-bedside-retro-light-with-black-ring/thumbnail.jpg",
     "actualPrice": null,
     "comparePrice": null,
     "inStock": null,

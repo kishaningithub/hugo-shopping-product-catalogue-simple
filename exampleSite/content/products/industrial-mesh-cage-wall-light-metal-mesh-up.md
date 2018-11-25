@@ -4,7 +4,7 @@
     "tags": ["Wall Light"],
     "categories": ["Wall Light"],
     "images": ["img/industrial-mesh-cage-wall-light-metal-mesh-up/1.png", "img/industrial-mesh-cage-wall-light-metal-mesh-up/2.jpg", "img/industrial-mesh-cage-wall-light-metal-mesh-up/3.jpg"],
-    "thumbnailImage": "img/industrial-mesh-cage-wall-light-metal-mesh-up/thumbnail.png",
+    "thumbnailImage": "/img/industrial-mesh-cage-wall-light-metal-mesh-up/thumbnail.png",
     "actualPrice": "₹ 4608.00",
     "comparePrice": "₹ 5000.00",
     "inStock": false,

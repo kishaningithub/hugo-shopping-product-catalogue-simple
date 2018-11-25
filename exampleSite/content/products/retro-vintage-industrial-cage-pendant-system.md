@@ -4,7 +4,7 @@
     "tags": ["Pendant Light"],
     "categories": ["Pendant Light"],
     "images": ["img/retro-vintage-industrial-cage-pendant-system/1.png", "img/retro-vintage-industrial-cage-pendant-system/2.png"],
-    "thumbnailImage": "img/retro-vintage-industrial-cage-pendant-system/thumbnail.png",
+    "thumbnailImage": "/img/retro-vintage-industrial-cage-pendant-system/thumbnail.png",
     "actualPrice": "₹ 3,744.00",
     "comparePrice": null,
     "inStock": true,
